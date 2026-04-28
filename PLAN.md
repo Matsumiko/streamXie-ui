@@ -20,7 +20,72 @@ Use this file for non-trivial tasks so plans survive session boundaries.
 
 ## Active Plan
 
-No active plan.
+### Task
+Deploy `streamXie-ui` to Vercel.
+
+### Goal
+Publish the React/Vite app to a production Vercel URL and record the deployment details in project docs.
+
+### Context
+The repository is public on GitHub and has a clean `main` branch. The app uses React Router with `BrowserRouter`, so Vercel needs SPA fallback routing to avoid 404s on direct deep links.
+
+### Assumptions
+
+- The machine is already authenticated with Vercel as the user stated.
+- Production deployment should use Vercel's static Vite flow: install, `npm run build`, output `dist`.
+- Add a `vercel.json` rewrite for SPA routing.
+
+### Ambiguities
+
+| Ambiguity | Resolution / Default | Flagged? |
+| --- | --- | --- |
+| Vercel project name | Use `streamxie-ui` if CLI asks or allows specifying a project | yes |
+
+### Constraints
+
+- Do not commit `.vercel/` local project metadata.
+- Do not write tokens or private auth details into session files.
+- Do not change app runtime behavior beyond deployment routing support.
+
+### Affected Surfaces
+
+- `vercel.json` - Vercel SPA rewrite config.
+- `.gitignore` - exclude local Vercel metadata if needed.
+- `README.md` - add production demo URL after deploy.
+- `TODO.md` - move hosted demo follow-up if completed.
+- `CHANGELOG.md` - record deployment.
+- `PLAN.md` - track and archive deployment plan.
+
+### Risk Assessment
+
+| Risk | Likelihood | Impact | Mitigation |
+| --- | --- | --- | --- |
+| Vercel auth/linking fails | medium | medium | Check CLI auth before deploy and report exact blocker |
+| Deep links 404 | medium | medium | Add `vercel.json` rewrite to `/index.html` |
+| Wrong project name on Vercel | low | low | Prefer `streamxie-ui` during link/deploy |
+
+### Execution Steps
+
+- [x] Step 1 - Audit repo/docs/package state.
+- [x] Step 2 - Check Vercel CLI authentication and project linking.
+- [x] Step 3 - Add/verify Vercel deployment config.
+- [x] Step 4 - Run local production build.
+- [~] Step 5 - Commit and push deployment config/docs if changed.
+- [ ] Step 6 - Deploy to Vercel production.
+- [ ] Step 7 - Verify deployment URL and update docs/changelog.
+
+### Rollback Plan
+
+- If deployment config breaks build or routing, revert `vercel.json` and redeploy the previous commit.
+- If Vercel deployment fails, keep local/git changes only if they are independently correct and report the blocker.
+
+### Definition of Done
+
+- [ ] Vercel production deployment succeeds.
+- [ ] Production URL is recorded.
+- [ ] Local build passes.
+- [ ] Git status is clean or only ignored local Vercel metadata remains.
+- [ ] Runtime session is completed.
 
 ---
 
