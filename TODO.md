@@ -1,0 +1,71 @@
+# TODO.md
+
+Strategic task backlog for this project.
+
+---
+
+## Priority Reference
+
+| Priority | Meaning |
+| --- | --- |
+| `P0` | Blocking |
+| `P1` | High value |
+| `P2` | Medium value |
+| `P3` | Nice to have |
+
+---
+
+## Active - P0
+
+No active P0 items.
+
+---
+
+## Active - P1
+
+- `P1` Add a `LICENSE` file before promoting the repository as reusable public software.
+- `P1` Initialize git in this workspace or clone from `https://github.com/Matsumiko/streamXie-ui.git`, then connect/push the prepared docs.
+- `P1` Add real screenshots or a hosted demo link to `README.md` after deployment.
+- `P1` Add lint and typecheck scripts before accepting outside contributions.
+
+---
+
+## Active - P2
+
+- `P2` Add code splitting for route-level pages or large libraries to reduce the current production bundle warning.
+- `P2` Add a documented data adapter layer before replacing `src/data/mockContent.ts` with API calls.
+- `P2` Add `.env.example` once backend/API integration begins.
+- `P2` Add contribution guidelines if the public repo starts receiving issues or pull requests.
+
+---
+
+## Active - P3
+
+- `P3` Add optional Storybook or component previews for reusable UI surfaces.
+- `P3` Add README badges for license, deploy status, and demo URL after those are available.
+
+---
+
+## Backlog - Under Consideration
+
+- Decide whether `streamXie-ui` should remain an app starter, become a reusable component library, or support both modes.
+- Add a template setup guide for replacing mock content with a CMS or headless API.
+- Add accessibility checks for keyboard navigation across the custom player and command palette.
+
+---
+
+## Blocked
+
+No blocked items.
+
+---
+
+## Done
+
+- `2026-04-28` Replaced public README and project documentation templates with streamXie-specific documentation.
+
+---
+
+## Cancelled
+
+No cancelled items.
