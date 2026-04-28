@@ -20,69 +20,7 @@ Use this file for non-trivial tasks so plans survive session boundaries.
 
 ## Active Plan
 
-### Task
-Initialize local git repository and push `streamXie-ui` to GitHub.
-
-### Goal
-Create the first commit from the current project workspace and publish it to `https://github.com/Matsumiko/streamXie-ui.git` on `main`.
-
-### Context
-The GitHub repository exists and is currently empty. The local workspace contains the prepared React/Vite streaming UI project, but it is not currently a git repository.
-
-### Assumptions
-
-- The remote repository shown by the user is the correct target.
-- This should be an initial public repository push.
-- Ignored build/dependency output should remain untracked.
-
-### Ambiguities
-
-| Ambiguity | Resolution / Default | Flagged? |
-| --- | --- | --- |
-| License choice | Do not invent one; leave as follow-up already tracked in `TODO.md` | yes |
-
-### Constraints
-
-- Do not commit ignored runtime session JSON files.
-- Do not commit `node_modules` or `dist`.
-- Use `main` as the initial branch.
-
-### Affected Surfaces
-
-- Git metadata - initialize repository, branch, remote, initial commit.
-- GitHub remote - push initial `main` branch.
-- `PLAN.md` - task tracking.
-- `.runbook/sessions/SESSION-20260428-1956.json` - runtime checkpoint.
-
-### Risk Assessment
-
-| Risk | Likelihood | Impact | Mitigation |
-| --- | --- | --- | --- |
-| Accidentally committing generated output | low | medium | Verify `.gitignore` and staged files before commit |
-| Push authentication failure | medium | low | Report exact failure if GitHub credentials are unavailable |
-| Wrong remote target | low | high | Use the exact URL provided by the user |
-
-### Execution Steps
-
-- [x] Step 1 - Confirm local git state, ignore rules, and remote emptiness.
-- [x] Step 2 - Initialize git repository and set remote.
-- [x] Step 3 - Stage and inspect files.
-- [~] Step 4 - Create initial commit.
-- [ ] Step 5 - Push `main` to GitHub.
-- [ ] Step 6 - Verify remote branch exists.
-
-### Rollback Plan
-
-- If commit is created locally but push fails, keep the commit and report the push blocker.
-- If remote configuration is wrong before push, update/remove the local remote before retrying.
-
-### Definition of Done
-
-- [ ] Local repo is initialized on `main`.
-- [ ] Initial commit exists.
-- [ ] Remote `origin` points to `https://github.com/Matsumiko/streamXie-ui.git`.
-- [ ] `main` is pushed successfully.
-- [ ] Runtime session is completed.
+No active plan.
 
 ---
 
@@ -99,6 +37,50 @@ No replans in progress.
 ---
 
 ## Archive
+
+### 2026-04-28 - Initialize and push `streamXie-ui` to GitHub
+
+**Status:** `[x]` Completed and verified
+
+**Goal:** Create the first local git commit from the current workspace and publish it to `https://github.com/Matsumiko/streamXie-ui.git` on `main`.
+
+**Assumptions Resolved:**
+
+- The remote repository shown by the user is the correct target.
+- The GitHub repository was empty before the initial push.
+- Ignored build, dependency, and runtime session artifacts should not be committed.
+- License selection remains a follow-up and was not guessed.
+
+**Affected Surfaces:**
+
+- Git repository metadata - initialized local repo, branch, remote, and upstream tracking.
+- GitHub remote - published `main`.
+- `PLAN.md` - archived completed push task.
+- `TODO.md` - moved repository push follow-up to Done.
+- `CODER.md` - updated repository status note.
+- `CHANGELOG.md` - recorded initial publication.
+
+**Completed Steps:**
+
+- `[x]` Confirmed local folder was not a git repository.
+- `[x]` Confirmed remote `main` had no existing refs.
+- `[x]` Initialized git and renamed the initial branch to `main`.
+- `[x]` Added `origin` as `https://github.com/Matsumiko/streamXie-ui.git`.
+- `[x]` Staged and inspected files; `node_modules`, `dist`, and runtime session JSON were not staged.
+- `[x]` Created initial commit `57eee86`.
+- `[x]` Pushed `main` to GitHub and set upstream tracking.
+- `[x]` Verified `origin/main` exists.
+
+**Verification:**
+
+- `git ls-remote origin refs/heads/main` returned the pushed branch.
+- `git status --short` was clean after the first push.
+- Staged file inspection confirmed ignored generated output was not committed.
+
+**Residual Risk:**
+
+- No `LICENSE` file exists yet, so public reuse terms are not formally defined.
+- Vite build still has a known non-blocking bundle-size warning from the prior verification.
 
 ### 2026-04-28 - Prepare public-facing documentation for `streamXie-ui`
 
@@ -143,6 +125,6 @@ No replans in progress.
 
 **Residual Risk:**
 
-- Workspace is not currently a git repository, so the changes are local and not pushed to `https://github.com/Matsumiko/streamXie-ui.git`.
+- Repository publication risk was resolved by the later `2026-04-28` GitHub push task.
 - Vite build emitted a non-blocking bundle-size warning for the main JS chunk above 500 kB.
 - No `LICENSE` file exists yet, so public reuse terms are not formally defined.

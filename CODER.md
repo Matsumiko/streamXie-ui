@@ -87,7 +87,7 @@ not configured
 - Design tokens are defined as CSS variables in `src/index.css` and surfaced through Tailwind names in `tailwind.config.js`.
 - The app uses Radix UI primitives for several base components and custom streaming-specific components for product surfaces.
 - `vite.config.ts` sets `base: "./"` for static deployment compatibility.
-- Workspace note: `/home/fadz/projects/github/streamora` is not currently initialized as a git repository, even though the intended public remote is `https://github.com/Matsumiko/streamXie-ui.git`.
+- Repository note: `/home/fadz/projects/github/streamora` is initialized on `main` and tracks `origin` at `https://github.com/Matsumiko/streamXie-ui.git`.
 
 ---
 

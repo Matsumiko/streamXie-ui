@@ -9,6 +9,48 @@ Most recent entry goes at the top.
 
 ## Entries
 
+## 2026-04-28 20:02 WIB - chore git - publish initial repository
+
+### Summary
+Initialized the local workspace as a git repository, created the initial project commit, pushed `main` to the public GitHub repository, and updated project tracking docs to reflect the published state.
+
+### Type
+chore
+
+### Area
+config / docs
+
+### Severity
+low
+
+### Changes
+- Initialized the local repository and set the default branch to `main`.
+- Added `origin` as `https://github.com/Matsumiko/streamXie-ui.git`.
+- Created initial commit `57eee86` with the prepared project files.
+- Pushed `main` to GitHub and set upstream tracking.
+- Updated project status notes in `CODER.md`, `TODO.md`, and `PLAN.md`.
+
+### Files
+- `CODER.md` - updated repository status note.
+- `TODO.md` - moved git initialization/push item to Done.
+- `PLAN.md` - archived the completed push plan.
+- `CHANGELOG.md` - recorded repository publication.
+
+### Verification
+- Ran `git push -u origin main`; push completed successfully.
+- Ran `git ls-remote origin refs/heads/main`; remote branch exists.
+- Confirmed generated output and runtime session JSON were not staged for the initial commit.
+
+### Migration / Deploy
+- Migration: none.
+- Env vars: none.
+- Deploy steps: none.
+- Rollback: remove or revert the pushed commits from GitHub if publication needs to be undone.
+
+### Residual Risk
+- No `LICENSE` file exists yet, so public reuse rights are still not formally defined.
+- The app has not been deployed to a hosted demo URL yet.
+
 ## 2026-04-28 19:50 WIB - docs project-docs - prepare public streamXie-ui documentation
 
 ### Summary
@@ -54,6 +96,6 @@ low
 - Rollback: restore the edited docs and package metadata from source control once the workspace is initialized as a git repository.
 
 ### Residual Risk
-- The local workspace is not currently a git repository, so the changes have not been committed or pushed to `https://github.com/Matsumiko/streamXie-ui.git`.
+- Repository publication risk was resolved by the later `2026-04-28 20:02 WIB` GitHub push entry.
 - Build completed with a Vite bundle-size warning for `dist/assets/index-*.js` above 500 kB; code splitting is recommended before scaling the app.
 - No license file exists yet, so public reuse rights are not formally defined.
