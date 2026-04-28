@@ -23,7 +23,6 @@ No active P0 items.
 
 ## Active - P1
 
-- `P1` Add a `LICENSE` file before promoting the repository as reusable public software.
 - `P1` Add real screenshots or a hosted demo link to `README.md` after deployment.
 - `P1` Add lint and typecheck scripts before accepting outside contributions.
 
@@ -61,6 +60,7 @@ No blocked items.
 
 ## Done
 
+- `2026-04-28` Added MIT License for public reuse.
 - `2026-04-28` Initialized git in the local workspace and pushed `main` to `https://github.com/Matsumiko/streamXie-ui.git`.
 - `2026-04-28` Replaced public README and project documentation templates with streamXie-specific documentation.
 

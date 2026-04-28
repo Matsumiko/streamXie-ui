@@ -38,6 +38,46 @@ No replans in progress.
 
 ## Archive
 
+### 2026-04-28 - Add MIT license for `streamXie-ui`
+
+**Status:** `[x]` Completed and verified
+
+**Goal:** Define public reuse terms by adding an MIT `LICENSE` file and updating project metadata/docs to match.
+
+**Assumptions Resolved:**
+
+- MIT License is the intended permissive default for this public reusable UI starter.
+- Copyright holder is `Matsumiko`.
+- Copyright year is `2026`.
+
+**Affected Surfaces:**
+
+- `LICENSE` - new MIT license text.
+- `README.md` - license badge and license section.
+- `package.json` and `package-lock.json` - npm license metadata.
+- `CODER.md` - durable license note.
+- `TODO.md` - moved license follow-up to Done.
+- `CHANGELOG.md` - recorded license addition.
+
+**Completed Steps:**
+
+- `[x]` Audited current repo state and docs mentioning license.
+- `[x]` Added MIT license and updated docs/package metadata.
+- `[x]` Refreshed lockfile and verified references.
+- `[x]` Updated changelog/TODO and archived plan.
+- `[x]` Ran `npm run build` successfully.
+
+**Verification:**
+
+- `npm install --package-lock-only --ignore-scripts` completed; npm audit reported 0 vulnerabilities.
+- `package.json` and root `package-lock.json` both report `MIT`.
+- `npm run build` completed successfully.
+
+**Residual Risk:**
+
+- License choice was made as MIT based on the public reuse goal; replace it in a follow-up commit if a different legal strategy is preferred.
+- Vite build still reports the known non-blocking chunk-size warning for the main JS bundle.
+
 ### 2026-04-28 - Initialize and push `streamXie-ui` to GitHub
 
 **Status:** `[x]` Completed and verified
@@ -49,7 +89,7 @@ No replans in progress.
 - The remote repository shown by the user is the correct target.
 - The GitHub repository was empty before the initial push.
 - Ignored build, dependency, and runtime session artifacts should not be committed.
-- License selection remains a follow-up and was not guessed.
+- License selection remained a follow-up at that time.
 
 **Affected Surfaces:**
 
@@ -79,7 +119,7 @@ No replans in progress.
 
 **Residual Risk:**
 
-- No `LICENSE` file exists yet, so public reuse terms are not formally defined.
+- License risk was resolved by the later `2026-04-28` MIT license task.
 - Vite build still has a known non-blocking bundle-size warning from the prior verification.
 
 ### 2026-04-28 - Prepare public-facing documentation for `streamXie-ui`
@@ -93,7 +133,7 @@ No replans in progress.
 - `streamXie-ui` is the public project/repository name.
 - The app is documented as a frontend-only streaming UI starter with mock/localStorage data.
 - The provided GitHub URL is the intended public remote.
-- The local workspace has no `.git` metadata, so push/commit work remains a follow-up.
+- The local workspace had no `.git` metadata at task start; that was resolved by the later GitHub push task.
 
 **Affected Surfaces:**
 
@@ -126,5 +166,5 @@ No replans in progress.
 **Residual Risk:**
 
 - Repository publication risk was resolved by the later `2026-04-28` GitHub push task.
+- License risk was resolved by the later `2026-04-28` MIT license task.
 - Vite build emitted a non-blocking bundle-size warning for the main JS chunk above 500 kB.
-- No `LICENSE` file exists yet, so public reuse terms are not formally defined.

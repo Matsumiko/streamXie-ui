@@ -15,7 +15,8 @@ Keep this file compact, durable, and project-specific. Do not use it for task lo
 **Primary framework(s):** React 18, Vite, Tailwind CSS  
 **Database:** none  
 **Auth system:** mock/client-side UI only; no real auth provider connected  
-**Deployment target:** static hosting such as Vercel, Netlify, GitHub Pages, or any host that serves `dist/`
+**Deployment target:** static hosting such as Vercel, Netlify, GitHub Pages, or any host that serves `dist/`  
+**License:** MIT
 
 ---
 

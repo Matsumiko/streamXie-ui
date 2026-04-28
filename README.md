@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/Matsumiko/streamXie-ui"><img alt="Repository" src="https://img.shields.io/badge/repo-streamXie--ui-10cfa6?style=for-the-badge&labelColor=0b0d12"></a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-f8d24e?style=for-the-badge&labelColor=0b0d12">
   <img alt="React" src="https://img.shields.io/badge/React-18.2-61dafb?style=for-the-badge&labelColor=0b0d12">
   <img alt="Vite" src="https://img.shields.io/badge/Vite-6.4-646cff?style=for-the-badge&labelColor=0b0d12">
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&labelColor=0b0d12">
@@ -169,7 +170,6 @@ Common deployment options:
 
 ## Public Release Checklist
 
-- Choose and add a `LICENSE` file before inviting outside reuse.
 - Add screenshots or a hosted demo link once deployment is ready.
 - Decide whether this repo is a template app, a component library, or both.
 - Add lint/typecheck/test scripts before accepting community contributions.
@@ -189,4 +189,4 @@ npm run build
 
 ## License
 
-No license file is included yet. Until a license is added, reuse rights are not formally granted.
+Released under the [MIT License](./LICENSE).

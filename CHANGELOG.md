@@ -9,6 +9,52 @@ Most recent entry goes at the top.
 
 ## Entries
 
+## 2026-04-28 20:07 WIB - docs license - add MIT license
+
+### Summary
+Added an MIT License so `streamXie-ui` has clear permissive public reuse terms, then synchronized README, npm metadata, project memory, TODO, and lockfile metadata.
+
+### Type
+docs
+
+### Area
+docs / config
+
+### Severity
+medium
+
+### Changes
+- Added `LICENSE` with MIT License text.
+- Updated `README.md` with an MIT license badge and license section.
+- Added `"license": "MIT"` to `package.json`.
+- Refreshed root package metadata in `package-lock.json`.
+- Updated `CODER.md` to record the license.
+- Moved the license task from active TODO to Done.
+
+### Files
+- `LICENSE` - MIT License terms.
+- `README.md` - public license badge and license section.
+- `package.json` - npm license metadata.
+- `package-lock.json` - lockfile license metadata.
+- `CODER.md` - durable project license note.
+- `TODO.md` - completed license follow-up.
+- `PLAN.md` - archived completed license task.
+
+### Verification
+- Ran `npm install --package-lock-only --ignore-scripts`; npm audit reported 0 vulnerabilities.
+- Verified `package.json` and root `package-lock.json` both report `MIT`.
+- Ran `npm run build`; Vite production build completed successfully.
+
+### Migration / Deploy
+- Migration: none.
+- Env vars: none.
+- Deploy steps: none.
+- Rollback: revert the license commit if a different license is chosen later.
+
+### Residual Risk
+- License choice was made as MIT based on the stated public reuse goal; a different legal strategy would require replacing the license in a follow-up commit.
+- Build still reports the known non-blocking Vite chunk-size warning for the main JS bundle.
+
 ## 2026-04-28 20:02 WIB - chore git - publish initial repository
 
 ### Summary
@@ -48,7 +94,7 @@ low
 - Rollback: remove or revert the pushed commits from GitHub if publication needs to be undone.
 
 ### Residual Risk
-- No `LICENSE` file exists yet, so public reuse rights are still not formally defined.
+- License risk was resolved by the later `2026-04-28 20:07 WIB` MIT license entry.
 - The app has not been deployed to a hosted demo URL yet.
 
 ## 2026-04-28 19:50 WIB - docs project-docs - prepare public streamXie-ui documentation
@@ -98,4 +144,4 @@ low
 ### Residual Risk
 - Repository publication risk was resolved by the later `2026-04-28 20:02 WIB` GitHub push entry.
 - Build completed with a Vite bundle-size warning for `dist/assets/index-*.js` above 500 kB; code splitting is recommended before scaling the app.
-- No license file exists yet, so public reuse rights are not formally defined.
+- License risk was resolved by the later `2026-04-28 20:07 WIB` MIT license entry.

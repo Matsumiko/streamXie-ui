@@ -2,6 +2,7 @@
   "name": "streamxie-ui",
   "version": "1.0.0",
   "description": "Cinematic React streaming UI starter for movie, series, anime, and catalog websites.",
+  "license": "MIT",
   "source": "./index.html",
   "type": "module",
   "repository": {
