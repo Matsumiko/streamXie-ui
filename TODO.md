@@ -23,7 +23,6 @@ No active P0 items.
 
 ## Active - P1
 
-- `P1` Add real screenshots or a hosted demo link to `README.md` after deployment.
 - `P1` Add lint and typecheck scripts before accepting outside contributions.
 
 ---
@@ -31,6 +30,7 @@ No active P0 items.
 ## Active - P2
 
 - `P2` Add code splitting for route-level pages or large libraries to reduce the current production bundle warning.
+- `P2` Connect Vercel to GitHub through a Vercel GitHub Login Connection if automatic deploys from pushes are desired.
 - `P2` Add a documented data adapter layer before replacing `src/data/mockContent.ts` with API calls.
 - `P2` Add `.env.example` once backend/API integration begins.
 - `P2` Add contribution guidelines if the public repo starts receiving issues or pull requests.
@@ -40,7 +40,7 @@ No active P0 items.
 ## Active - P3
 
 - `P3` Add optional Storybook or component previews for reusable UI surfaces.
-- `P3` Add README badges for license, deploy status, and demo URL after those are available.
+- `P3` Add README screenshots once the public presentation needs visual previews.
 
 ---
 
@@ -60,6 +60,7 @@ No blocked items.
 
 ## Done
 
+- `2026-04-28` Deployed production demo to `https://streamxie-ui.vercel.app`.
 - `2026-04-28` Added MIT License for public reuse.
 - `2026-04-28` Initialized git in the local workspace and pushed `main` to `https://github.com/Matsumiko/streamXie-ui.git`.
 - `2026-04-28` Replaced public README and project documentation templates with streamXie-specific documentation.

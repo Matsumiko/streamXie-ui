@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/Matsumiko/streamXie-ui"><img alt="Repository" src="https://img.shields.io/badge/repo-streamXie--ui-10cfa6?style=for-the-badge&labelColor=0b0d12"></a>
+  <a href="https://streamxie-ui.vercel.app"><img alt="Live Demo" src="https://img.shields.io/badge/demo-online-10cfa6?style=for-the-badge&labelColor=0b0d12"></a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-f8d24e?style=for-the-badge&labelColor=0b0d12">
   <img alt="React" src="https://img.shields.io/badge/React-18.2-61dafb?style=for-the-badge&labelColor=0b0d12">
   <img alt="Vite" src="https://img.shields.io/badge/Vite-6.4-646cff?style=for-the-badge&labelColor=0b0d12">
@@ -23,6 +24,10 @@
 `streamXie UI` is a frontend template for creators who want to ship a polished streaming-style website without starting from a blank screen. It includes a dark cinematic visual system, responsive catalog layouts, detail pages, watch page interactions, profile UI, mock auth screens, and local demo data.
 
 This project is designed as a starter UI. It does not include a production backend, real video hosting, payments, DRM, or licensed media delivery.
+
+## Live Demo
+
+Production demo: [https://streamxie-ui.vercel.app](https://streamxie-ui.vercel.app)
 
 ## Highlights
 
@@ -154,6 +159,10 @@ Demo persistence lives in `localStorage` through `src/lib/storage.ts`, `src/lib/
 
 `npm run build` creates a static app in `dist/`.
 
+Current production deployment:
+
+- Vercel: [https://streamxie-ui.vercel.app](https://streamxie-ui.vercel.app)
+
 Common deployment options:
 
 - Vercel: import the GitHub repo, use `npm run build`, output directory `dist`.
@@ -170,7 +179,7 @@ Common deployment options:
 
 ## Public Release Checklist
 
-- Add screenshots or a hosted demo link once deployment is ready.
+- Add screenshots once the public presentation needs visual previews.
 - Decide whether this repo is a template app, a component library, or both.
 - Add lint/typecheck/test scripts before accepting community contributions.
 - Replace demo media with assets you own or assets explicitly licensed for reuse.

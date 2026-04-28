@@ -15,7 +15,7 @@ Keep this file compact, durable, and project-specific. Do not use it for task lo
 **Primary framework(s):** React 18, Vite, Tailwind CSS  
 **Database:** none  
 **Auth system:** mock/client-side UI only; no real auth provider connected  
-**Deployment target:** static hosting such as Vercel, Netlify, GitHub Pages, or any host that serves `dist/`  
+**Deployment target:** Vercel production at `https://streamxie-ui.vercel.app`; static hosting can also serve `dist/`  
 **License:** MIT
 
 ---
@@ -89,6 +89,8 @@ not configured
 - The app uses Radix UI primitives for several base components and custom streaming-specific components for product surfaces.
 - `vite.config.ts` sets `base: "./"` for static deployment compatibility.
 - Repository note: `/home/fadz/projects/github/streamora` is initialized on `main` and tracks `origin` at `https://github.com/Matsumiko/streamXie-ui.git`.
+- Vercel CLI project is linked locally as `novamaryat-9209s-projects/streamxie-ui`; production alias is `https://streamxie-ui.vercel.app`.
+- Vercel GitHub auto-deploy integration is not connected yet because the Vercel account needs a GitHub Login Connection. CLI production deploy works.
 
 ---
 

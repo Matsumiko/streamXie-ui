@@ -9,6 +9,56 @@ Most recent entry goes at the top.
 
 ## Entries
 
+## 2026-04-28 20:36 WIB - infra deploy - deploy to Vercel production
+
+### Summary
+Configured Vercel SPA routing, deployed `streamXie-ui` to production, verified the deployment and a deep-link route, and recorded the production demo URL in project docs.
+
+### Type
+infra
+
+### Area
+infra / docs / config
+
+### Severity
+medium
+
+### Changes
+- Added `vercel.json` with a fallback rewrite to `index.html` for React Router deep links.
+- Added `.vercel` to `.gitignore` and cleaned duplicate local Vercel ignore entries.
+- Deployed production to `https://streamxie-ui.vercel.app`.
+- Updated `README.md` with a live demo badge, live demo section, and deployment URL.
+- Updated `package.json` homepage to the production demo URL.
+- Updated `CODER.md` with Vercel deployment notes.
+- Updated `TODO.md` with completed deployment and a follow-up for Vercel/GitHub auto-deploy integration.
+
+### Files
+- `vercel.json` - Vercel SPA fallback rewrite.
+- `.gitignore` - local Vercel metadata ignored.
+- `README.md` - live demo and deployment URL.
+- `package.json` - homepage URL.
+- `CODER.md` - deployment notes.
+- `TODO.md` - deployment follow-up tracking.
+- `PLAN.md` - archived deployment plan.
+- `CHANGELOG.md` - recorded deployment.
+
+### Verification
+- Ran `npm run build`; Vite production build completed successfully.
+- Ran `vercel deploy --prod --yes`; deployment completed and aliased to `https://streamxie-ui.vercel.app`.
+- Ran `curl -I https://streamxie-ui.vercel.app`; returned HTTP 200.
+- Ran `curl -I https://streamxie-ui.vercel.app/browse`; returned HTTP 200, verifying SPA fallback routing.
+- Ran `vercel inspect https://streamxie-ui.vercel.app --wait --timeout 90s`; deployment status was Ready.
+
+### Migration / Deploy
+- Migration: none.
+- Env vars: none.
+- Deploy steps: Vercel CLI production deploy.
+- Rollback: redeploy a previous Vercel deployment or revert the deployment config commit and redeploy.
+
+### Residual Risk
+- Vercel GitHub repository integration failed because the Vercel account needs a GitHub Login Connection; manual CLI deployment is working, but automatic deploys from GitHub pushes are not connected yet.
+- Build still reports the known non-blocking Vite chunk-size warning for the main JS bundle.
+
 ## 2026-04-28 20:07 WIB - docs license - add MIT license
 
 ### Summary
